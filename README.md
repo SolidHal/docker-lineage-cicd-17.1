@@ -38,6 +38,27 @@ values between the brackets.
 
 TL;DR - go to the [Examples](#examples)
 
+### Hardware / VM guest requirements
+
+Builds tend to fail when the build environment has only two CPU threads/cores available. (This is not a Lineage/Docker specific issue!) It is recommended to use a device or VM guest with at least four CPU cores.
+
+It is higly recommended to provide at least 8 GB of RAM and 12 GB of SWAP to the build environment to ensure that even the most memory hungry ROMs can be built without issues. Lower values might be possible for most of the time (?) but have been proven to be problematic with specific builts. (e.g. LineageOS 16.0 with SU and restrited spoofing for Xiaomi Mi Mix)
+
+The following packages and settings are also recommended:
+
+
+
+ * sudo apt install gnutls-bin
+
+
+
+ * sudo apt install python2
+
+
+
+ * git config --global http.postBuffer 1048576000
+
+
 ### Fundamental settings
 
 The two fundamental settings are:
